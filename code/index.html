@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>The Crazy Wagon</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="ui.css" />
+  <script type="text/javascript" src="./libs/three.js"></script>
+  <script type="text/javascript" src="./libs/jquery.js"></script>
+  <script type="text/javascript" src="./libs/TrackballControls.js"></script>
+  <script type="text/javascript" src="./libs/MTLLoader.js"></script>
+  <script type="text/javascript" src="./libs/OBJLoader.js"></script>
+  <script type="text/javascript" src="Obstacle.js"></script>
+  <script type="text/javascript" src="Rail.js"></script>
+  <script type="text/javascript" src="Wagon.js"></script>
+  <script type="text/javascript" src="CrazyWagonGame.js"></script>
+  <script type="text/javascript" src="MyScene.js"></script>
+</head>
+
+<body>
+  <div id="game">
+    <row id="main-header">
+      <span id="header-span">
+        <span id="laps">Laps: 0</span>
+        <span id="score">Score: 0 points</span>
+        <span id="crono">Time: 0:0:00</span>
+        <span id="lives">Lives: 3</span>
+        <span id="balloons">Balloons destroyed: 0 / 0</span>
+      </span>
+    </row>
+    <!-- --------------- MENU INICIO DEL JUEGO ---------------- -->
+    <div id="protected">
+      <h1>PROTECTED</h1>
+    </div>
+    <div id="menuInicio">
+      <h1>THE CRAZY WAGON</h1>
+      <h2> - Controls - </h2>
+      <h3>
+        <li>Show/Hide Help - "H"</li>
+        <li>Pause/Continue - "P"</li>
+        <li>Rotate left - "A / LEFT ARROW"</li>
+        <li>Rotate right - "D / RIGHT ARROW"</li>
+        <li>Explode Balloon - Left Click</li>
+      </h3>
+      <br><br>
+      <button id="start-game-button" class="button">START GAME</button>
+    </div>
+    <!-- --------------- MENU AYUDA ---------------- -->
+    <div id="menuAyuda">
+      <h1>CONTROLS</h1>
+      <h2>
+        <li>Show/Hide Help - "H"</li>
+        <li>Pause/Continue - "P"</li>
+        <li>Rotate left - "A / LEFT ARROW"</li>
+        <li>Rotate right - "D / RIGHT ARROW"</li>
+        <li>Explode Balloon - Left Click</li>
+      </h2>
+    </div>
+    <div id="menuFin">
+      <h1>FIN DEL JUEGO</h1>
+      <h2>
+        <li id="fin-score">Score:</li>
+        <li id="fin-laps">Laps:</li>
+        <li id="fin-balloons">Balloons deleted:</li>
+        <li id="fin-time">Time:</li>
+      </h2>
+      <h2>
+        <button id="reload-button" class="button3">PLAY AGAIN</button>
+      </h2>
+    </div>
+    <div id="pause">
+      <h1>PAUSE</h1>
+    </div>
+  </div>
+  <div id="WebGL-output"></div>
+
+  <div id="loading-screen">
+    <span id="loading_logo" class="ui_logo"></span>
+    <div id="welcome">
+      <h1>WELCOME</h1>
+      <br>
+    </div>
+    <div id="selectDifficult">
+      <h1>SELECT MAP</h1>
+      <label class="map-selector">FAR WEST
+        <input id="west-button" type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+      <label class="map-selector">SPACE
+        <input id="space-button" type="checkbox">
+        <span class="checkmark"></span>
+      </label>
+      <h1>SELECT LEVEL</h1>
+      <h2>
+        <button id="easy-button" class="button2">EASY</button>
+      </h2>
+      <h2>
+        <button id="medium-button" class="button2">MEDIUM</button>
+      </h2>
+      <h2>
+        <button id="hard-button" class="button2">HARD</button>
+      </h2>
+    </div>
+    <div id="spinner" class="loader"></div>
+  </div>
+</body>
+
+</html>
